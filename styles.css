@@ -1,0 +1,399 @@
+/* reset the browser styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+    position: relative;
+}
+
+/* styles for the header */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #150f41;
+
+    /* make header fixed */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 3;
+
+    /* padding top/bottom set to 0, and left/right to 40px */
+    padding: 0px 40px;
+}
+
+/* styles for header container */
+header .header-container {
+    background-color: #150f41;
+
+    /* arrange every immediate child horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* set the max-width */
+    max-width: 1172px;
+    margin: 0 auto;
+}
+
+/* styles for logo wrapper */
+.logo-wrapper {
+    width: auto;
+    height: 80px;
+    line-height: 80px;
+}
+
+.logo-image-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* takes space as required only */
+    display: inline-block;
+    margin-right: 8px;
+
+    /* align the logo vertically center within the parent height */
+    vertical-align: middle;
+}
+
+/* styles the logo image */
+.logo-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* styles the logo text */
+.logo-wrapper .logo-text {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/* styles the list containing navigation link */
+header .main-navbar ul {
+    /* arrange all links horizontally */
+    display: flex;
+
+    /* sets 20px space between flex items (list items) */
+    gap: 20px;
+
+    /* hides the list marker */
+    list-style: none;
+}
+
+/* styles the links */
+.main-navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* style link on mouse over */
+.main-navbar a:hover {
+    color: #ff4d71;
+}
+
+
+
+main.container {
+    width: 100%;
+}
+
+/* styles for each section; there will be more sections */
+.container .section {
+    /* take height as required only */
+    height: auto;
+    padding: 80px;
+
+    /* aligns the content to the center */
+    text-align: center;
+}
+
+/* add the background color in alternate odd sections;
+more sections will be added later */
+.container .section:nth-of-type(odd) {
+    background-color: #007f99;
+}
+
+.section .section-content {
+    height: 100%;
+    /* sets the max-width same as the max-width of header container */
+    max-width: 1172px;
+
+    /*aligns horizontally center within the parent element */
+    margin: 0 auto;
+}
+
+/* hero section style */
+.container .section-hero {
+    background: rgb(21, 15, 65);
+    background: #00d4ff 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+}
+
+/* style the heading  */
+.hero-section-content h1 {
+    font-size: 36px;
+}
+
+.hero-section-content .tag-line {
+    font-size: 24px;
+}
+
+/* styles the profile wrapper in hero section */
+.profile-wrapper {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 30px auto;
+}
+
+/* styles the profile image */
+.profile-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* styles the name within the hero section */
+.hero-section-content h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+/* styles all the icons */
+.social-icons-wrapper .fab {
+    font-size: 28px;
+    margin: 8px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+/* styles applied on mouseover on icons */
+.social-icons-wrapper .fab:hover {
+    color: #ff4d71;
+}
+/* existing styles here */
+
+/* common style for all section,
+section content, section heading, and section tagline */
+.container .section {
+    height: auto;
+    padding: 80px;
+    text-align: center;
+}
+
+.section .section-content {
+    height: 100%;
+    max-width: 1172px;
+    margin: 0 auto;
+}
+
+.section-content .section-heading {
+    font-size: 36px;
+    color: #150f41;
+    margin-bottom: 16px;
+}
+
+.section-content .section-tag-line {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.section-about .section-tag-line {
+    color: rgba(0, 0, 0, 0.74);
+    font-size: 32px;
+}
+
+/* styles about introduction paragraph */
+.section-about p {
+    font-size: 22px;
+    width: 90%;
+    margin: 40px auto;
+}
+/* keep earlier styles here */
+
+.experience-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px;
+}
+
+.experience-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+.experience-card .card-image-wrapper {
+    margin: 10px;
+}
+
+.experience-card li {
+    list-style: none;
+}
+
+.experience-card .list-heading {
+    font-weight: bold;
+    margin: 12px 8px;
+}
+/* keep earlier styles here */
+
+.project-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 32px;
+}
+
+.project-card {
+    width: 300px;
+    height: 300px;
+
+    /* properties for background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* set the background images for project cards */
+.project-card-1 {
+    background-image: url("https://acko-cms.ackoassets.com/basic_car_knowledge_8ad846808b.png");
+}
+
+.project-card-2 {
+    background-image: url("https://media.licdn.com/dms/image/v2/C4E12AQHAXXmNlT6s2Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1647735078631?e=2147483647&v=beta&t=hKEVdiv9MStjmaEpKGUgWb7waPhTRM7C8QSCHZqIkz8");
+}
+
+.project-card-3 {
+    background-image: url("https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/book-your-homestay-poster-template-z4tojg505c1081.webp");
+}
+
+.project-card-4 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPn-UE-xdBZIPnYjfXvr5X2aslDNGx-Okfg&s");
+}
+
+
+.project-card p {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.762);
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* show the project card description while hovering */
+.project-card:hover p {
+    opacity: 1;
+}
+span{
+    color: #ec33ff;
+}
+
+form {
+    background-color: white;
+    border-radius: 12px;
+    text-align: left;
+    padding: 40px 0px;
+}
+
+/* styles the wrapper enclosing input fields and textarea */
+.form-fields-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px;
+}
+
+form .input-box,
+form .message-box {
+    width: 50%;
+}
+
+/* styles the form label */
+form label {
+    display: block;
+    font-size: 20px;
+    margin: 8px 0px;
+}
+
+/* styles the input fields and textarea field */
+form input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+}
+
+/* styles the form submit button */
+form button {
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    font-size: 18px;
+    background-color: #150f41;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.5s ease;
+}
+
+/* changes the button background color while hovering */
+form button:hover {
+    background-color: #ff4d71;
+}
+/* keep earlier styles here */
+
+/* styles the footer */
+footer {
+    background-color: #150f41;
+    height: 40px;
+    color: white;
+}
+
+/* styles the footer container */
+footer .footer-container {
+    line-height: 40px;
+    max-width: 1172px;
+
+    /* arranges the footer in center */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* styles the heart icon */
+footer .heart-icon {
+    color: red;
+}
